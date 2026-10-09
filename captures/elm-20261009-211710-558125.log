@@ -1,0 +1,184 @@
+2026-10-09 21:17:10,558 LOG_FILE /Users/alex/IdeaProjects/ELM327wifi/captures/elm-20261009-211710-558125.log
+2026-10-09 21:17:10,568 INIT begin target=B1 tester=F1 attempts=30
+2026-10-09 21:17:10,568 INIT attempt 1/30
+2026-10-09 21:17:10,923 INIT host low=26.220 ms high=25.008 ms (not wire measurements)
+2026-10-09 21:17:10,923 TX 81 B1 F1 81 A4
+2026-10-09 21:17:10,933 RX_ECHO ignored
+2026-10-09 21:17:11,923 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:11,923 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:11,923 INIT attempt 2/30
+2026-10-09 21:17:12,279 INIT host low=26.183 ms high=25.013 ms (not wire measurements)
+2026-10-09 21:17:12,279 TX 81 B1 F1 81 A4
+2026-10-09 21:17:12,290 RX_ECHO ignored
+2026-10-09 21:17:13,290 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:13,291 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:13,291 INIT attempt 3/30
+2026-10-09 21:17:13,646 INIT host low=26.385 ms high=25.015 ms (not wire measurements)
+2026-10-09 21:17:13,647 TX 81 B1 F1 81 A4
+2026-10-09 21:17:13,657 RX_ECHO ignored
+2026-10-09 21:17:14,650 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:14,650 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:14,650 INIT attempt 4/30
+2026-10-09 21:17:15,005 INIT host low=26.198 ms high=25.006 ms (not wire measurements)
+2026-10-09 21:17:15,006 TX 81 B1 F1 81 A4
+2026-10-09 21:17:15,016 RX_ECHO ignored
+2026-10-09 21:17:16,006 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:16,006 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:16,007 INIT attempt 5/30
+2026-10-09 21:17:16,362 INIT host low=26.112 ms high=25.005 ms (not wire measurements)
+2026-10-09 21:17:16,362 TX 81 B1 F1 81 A4
+2026-10-09 21:17:16,373 RX_ECHO ignored
+2026-10-09 21:17:17,370 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:17,370 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:17,370 INIT attempt 6/30
+2026-10-09 21:17:17,724 INIT host low=25.961 ms high=25.004 ms (not wire measurements)
+2026-10-09 21:17:17,725 TX 81 B1 F1 81 A4
+2026-10-09 21:17:17,736 RX_ECHO ignored
+2026-10-09 21:17:18,734 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:18,734 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:18,734 INIT attempt 7/30
+2026-10-09 21:17:19,089 INIT host low=26.182 ms high=25.006 ms (not wire measurements)
+2026-10-09 21:17:19,090 TX 81 B1 F1 81 A4
+2026-10-09 21:17:19,100 RX_ECHO ignored
+2026-10-09 21:17:20,092 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:20,093 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:20,093 INIT attempt 8/30
+2026-10-09 21:17:20,454 INIT host low=26.016 ms high=25.004 ms (not wire measurements)
+2026-10-09 21:17:20,455 TX 81 B1 F1 81 A4
+2026-10-09 21:17:20,465 RX_ECHO ignored
+2026-10-09 21:17:21,461 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:21,462 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:21,462 INIT attempt 9/30
+2026-10-09 21:17:21,819 INIT host low=26.254 ms high=25.018 ms (not wire measurements)
+2026-10-09 21:17:21,819 TX 81 B1 F1 81 A4
+2026-10-09 21:17:21,829 RX_ECHO ignored
+2026-10-09 21:17:22,828 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:22,830 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:22,831 INIT attempt 10/30
+2026-10-09 21:17:23,186 INIT host low=26.195 ms high=25.007 ms (not wire measurements)
+2026-10-09 21:17:23,186 TX 81 B1 F1 81 A4
+2026-10-09 21:17:23,197 RX_ECHO ignored
+2026-10-09 21:17:24,191 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:24,192 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:24,192 INIT attempt 11/30
+2026-10-09 21:17:24,547 INIT host low=26.187 ms high=25.005 ms (not wire measurements)
+2026-10-09 21:17:24,547 TX 81 B1 F1 81 A4
+2026-10-09 21:17:24,558 RX_ECHO ignored
+2026-10-09 21:17:25,550 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:25,550 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:25,550 INIT attempt 12/30
+2026-10-09 21:17:25,905 INIT host low=26.249 ms high=25.007 ms (not wire measurements)
+2026-10-09 21:17:25,905 TX 81 B1 F1 81 A4
+2026-10-09 21:17:25,916 RX_ECHO ignored
+2026-10-09 21:17:26,911 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:26,911 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:26,911 INIT attempt 13/30
+2026-10-09 21:17:27,267 INIT host low=26.218 ms high=25.006 ms (not wire measurements)
+2026-10-09 21:17:27,267 TX 81 B1 F1 81 A4
+2026-10-09 21:17:27,278 RX_ECHO ignored
+2026-10-09 21:17:28,273 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:28,274 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:28,274 INIT attempt 14/30
+2026-10-09 21:17:28,628 INIT host low=26.088 ms high=25.004 ms (not wire measurements)
+2026-10-09 21:17:28,629 TX 81 B1 F1 81 A4
+2026-10-09 21:17:28,640 RX_ECHO ignored
+2026-10-09 21:17:29,634 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:29,635 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:29,635 INIT attempt 15/30
+2026-10-09 21:17:29,989 INIT host low=26.101 ms high=25.004 ms (not wire measurements)
+2026-10-09 21:17:29,990 TX 81 B1 F1 81 A4
+2026-10-09 21:17:30,000 RX_ECHO ignored
+2026-10-09 21:17:30,993 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:30,993 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:30,993 INIT attempt 16/30
+2026-10-09 21:17:31,351 INIT host low=26.378 ms high=25.018 ms (not wire measurements)
+2026-10-09 21:17:31,351 TX 81 B1 F1 81 A4
+2026-10-09 21:17:31,362 RX_ECHO ignored
+2026-10-09 21:17:32,360 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:32,361 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:32,361 INIT attempt 17/30
+2026-10-09 21:17:32,716 INIT host low=26.082 ms high=25.005 ms (not wire measurements)
+2026-10-09 21:17:32,717 TX 81 B1 F1 81 A4
+2026-10-09 21:17:32,727 RX_ECHO ignored
+2026-10-09 21:17:33,723 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:33,724 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:33,724 INIT attempt 18/30
+2026-10-09 21:17:34,079 INIT host low=26.120 ms high=25.017 ms (not wire measurements)
+2026-10-09 21:17:34,080 TX 81 B1 F1 81 A4
+2026-10-09 21:17:34,090 RX_ECHO ignored
+2026-10-09 21:17:35,091 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:35,091 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:35,091 INIT attempt 19/30
+2026-10-09 21:17:35,447 INIT host low=26.253 ms high=25.007 ms (not wire measurements)
+2026-10-09 21:17:35,447 TX 81 B1 F1 81 A4
+2026-10-09 21:17:35,458 RX_ECHO ignored
+2026-10-09 21:17:36,460 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:36,460 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:36,460 INIT attempt 20/30
+2026-10-09 21:17:36,816 INIT host low=26.228 ms high=25.004 ms (not wire measurements)
+2026-10-09 21:17:36,816 TX 81 B1 F1 81 A4
+2026-10-09 21:17:36,827 RX_ECHO ignored
+2026-10-09 21:17:37,823 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:37,823 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:37,823 INIT attempt 21/30
+2026-10-09 21:17:38,178 INIT host low=25.962 ms high=25.004 ms (not wire measurements)
+2026-10-09 21:17:38,178 TX 81 B1 F1 81 A4
+2026-10-09 21:17:38,189 RX_ECHO ignored
+2026-10-09 21:17:39,188 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:39,188 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:39,188 INIT attempt 22/30
+2026-10-09 21:17:39,544 INIT host low=26.297 ms high=25.003 ms (not wire measurements)
+2026-10-09 21:17:39,544 TX 81 B1 F1 81 A4
+2026-10-09 21:17:39,555 RX_ECHO ignored
+2026-10-09 21:17:40,545 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:40,546 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:40,547 INIT attempt 23/30
+2026-10-09 21:17:40,903 INIT host low=26.298 ms high=25.006 ms (not wire measurements)
+2026-10-09 21:17:40,904 TX 81 B1 F1 81 A4
+2026-10-09 21:17:40,914 RX_ECHO ignored
+2026-10-09 21:17:41,914 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:41,914 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:41,914 INIT attempt 24/30
+2026-10-09 21:17:42,269 INIT host low=26.279 ms high=25.004 ms (not wire measurements)
+2026-10-09 21:17:42,270 TX 81 B1 F1 81 A4
+2026-10-09 21:17:42,280 RX_ECHO ignored
+2026-10-09 21:17:43,274 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:43,275 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:43,276 INIT attempt 25/30
+2026-10-09 21:17:43,631 INIT host low=26.325 ms high=25.009 ms (not wire measurements)
+2026-10-09 21:17:43,631 TX 81 B1 F1 81 A4
+2026-10-09 21:17:43,642 RX_ECHO ignored
+2026-10-09 21:17:44,639 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:44,639 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:44,639 INIT attempt 26/30
+2026-10-09 21:17:44,995 INIT host low=26.162 ms high=25.005 ms (not wire measurements)
+2026-10-09 21:17:44,995 TX 81 B1 F1 81 A4
+2026-10-09 21:17:45,006 RX_ECHO ignored
+2026-10-09 21:17:45,997 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:45,998 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:45,998 INIT attempt 27/30
+2026-10-09 21:17:46,353 INIT host low=26.054 ms high=25.005 ms (not wire measurements)
+2026-10-09 21:17:46,354 TX 81 B1 F1 81 A4
+2026-10-09 21:17:46,364 RX_ECHO ignored
+2026-10-09 21:17:47,359 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:47,359 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:47,359 INIT attempt 28/30
+2026-10-09 21:17:47,714 INIT host low=26.042 ms high=25.007 ms (not wire measurements)
+2026-10-09 21:17:47,714 TX 81 B1 F1 81 A4
+2026-10-09 21:17:47,725 RX_ECHO ignored
+2026-10-09 21:17:48,726 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:48,726 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:48,726 INIT attempt 29/30
+2026-10-09 21:17:49,082 INIT host low=26.033 ms high=25.004 ms (not wire measurements)
+2026-10-09 21:17:49,082 TX 81 B1 F1 81 A4
+2026-10-09 21:17:49,093 RX_ECHO ignored
+2026-10-09 21:17:50,084 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:50,085 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:50,085 INIT attempt 30/30
+2026-10-09 21:17:50,440 INIT host low=26.188 ms high=25.004 ms (not wire measurements)
+2026-10-09 21:17:50,440 TX 81 B1 F1 81 A4
+2026-10-09 21:17:50,451 RX_ECHO ignored
+2026-10-09 21:17:51,446 RX_TIMEOUT service=81 partial=
+2026-10-09 21:17:51,447 INIT attempt: no valid C1 with two key bytes
+2026-10-09 21:17:51,447 INIT failed: no valid C1 after 30 attempts
+2026-10-09 21:17:51,448 PROBE failed: no positive parameter response

@@ -1,0 +1,94 @@
+2026-10-09 23:40:12,913 LOG_FILE /Users/alex/IdeaProjects/ELM327wifi/captures/elm-20261009-234012-912808.log
+2026-10-09 23:40:12,924 INIT begin target=B1 tester=F1 attempts=30
+2026-10-09 23:40:12,924 INIT attempt 1/30
+2026-10-09 23:40:13,233 INIT wakeup burst x1 sent, gap=7.8 ms (not wire measurement)
+2026-10-09 23:40:14,237 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:14,238 INIT attempt 2/30
+2026-10-09 23:40:14,549 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:15,559 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:15,560 INIT attempt 3/30
+2026-10-09 23:40:15,870 INIT wakeup burst x1 sent, gap=7.5 ms (not wire measurement)
+2026-10-09 23:40:16,880 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:16,880 INIT attempt 4/30
+2026-10-09 23:40:17,190 INIT wakeup burst x1 sent, gap=7.4 ms (not wire measurement)
+2026-10-09 23:40:18,190 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:18,191 INIT attempt 5/30
+2026-10-09 23:40:18,502 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:19,512 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:19,512 INIT attempt 6/30
+2026-10-09 23:40:19,823 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:20,824 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:20,825 INIT attempt 7/30
+2026-10-09 23:40:21,136 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:22,140 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:22,140 INIT attempt 8/30
+2026-10-09 23:40:22,451 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:23,461 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:23,462 INIT attempt 9/30
+2026-10-09 23:40:23,773 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:24,779 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:24,779 INIT attempt 10/30
+2026-10-09 23:40:25,090 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:26,101 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:26,101 INIT attempt 11/30
+2026-10-09 23:40:26,412 INIT wakeup burst x1 sent, gap=7.9 ms (not wire measurement)
+2026-10-09 23:40:27,419 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:27,419 INIT attempt 12/30
+2026-10-09 23:40:27,729 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:28,736 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:28,737 INIT attempt 13/30
+2026-10-09 23:40:29,047 INIT wakeup burst x1 sent, gap=7.6 ms (not wire measurement)
+2026-10-09 23:40:30,050 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:30,051 INIT attempt 14/30
+2026-10-09 23:40:30,362 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:31,366 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:31,367 INIT attempt 15/30
+2026-10-09 23:40:31,678 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:32,680 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:32,680 INIT attempt 16/30
+2026-10-09 23:40:32,991 INIT wakeup burst x1 sent, gap=7.8 ms (not wire measurement)
+2026-10-09 23:40:33,995 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:33,996 INIT attempt 17/30
+2026-10-09 23:40:34,306 INIT wakeup burst x1 sent, gap=7.5 ms (not wire measurement)
+2026-10-09 23:40:35,318 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:35,318 INIT attempt 18/30
+2026-10-09 23:40:35,629 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:36,632 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:36,632 INIT attempt 19/30
+2026-10-09 23:40:36,943 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:37,949 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:37,949 INIT attempt 20/30
+2026-10-09 23:40:38,260 INIT wakeup burst x1 sent, gap=7.7 ms (not wire measurement)
+2026-10-09 23:40:39,266 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:39,267 INIT attempt 21/30
+2026-10-09 23:40:39,578 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:40,580 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:40,580 INIT attempt 22/30
+2026-10-09 23:40:40,892 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:41,904 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:41,904 INIT attempt 23/30
+2026-10-09 23:40:42,216 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:43,220 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:43,221 INIT attempt 24/30
+2026-10-09 23:40:43,531 INIT wakeup burst x1 sent, gap=7.2 ms (not wire measurement)
+2026-10-09 23:40:44,543 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:44,543 INIT attempt 25/30
+2026-10-09 23:40:44,853 INIT wakeup burst x1 sent, gap=7.3 ms (not wire measurement)
+2026-10-09 23:40:45,861 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:45,861 INIT attempt 26/30
+2026-10-09 23:40:46,171 INIT wakeup burst x1 sent, gap=7.8 ms (not wire measurement)
+2026-10-09 23:40:47,181 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:47,181 INIT attempt 27/30
+2026-10-09 23:40:47,491 INIT wakeup burst x1 sent, gap=7.5 ms (not wire measurement)
+2026-10-09 23:40:48,498 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:48,498 INIT attempt 28/30
+2026-10-09 23:40:48,810 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:49,810 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:49,811 INIT attempt 29/30
+2026-10-09 23:40:50,122 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:51,125 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:51,126 INIT attempt 30/30
+2026-10-09 23:40:51,437 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:40:52,450 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:40:52,450 INIT failed: no valid C1 after 30 attempts
+2026-10-09 23:40:52,450 PROBE failed: no positive parameter response

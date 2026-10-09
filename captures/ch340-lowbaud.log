@@ -1,0 +1,5 @@
+PORT=/dev/cu.usbserial-110  (TX shorted to RX)
+          300 8N1 0x00: baud=300 frame_bits=10 est_low=30.0ms  sent=1 got=00 elapsed=41.2ms
+          360 8N1 0x00: baud=360 frame_bits=10 est_low=25.0ms  sent=1 got=00 elapsed=34.7ms
+          400 8N1 0x00: baud=400 frame_bits=10 est_low=22.5ms  sent=1 got=00 elapsed=31.1ms
+        10400 8N1 0x00: baud=10400 frame_bits=10 est_low=0.9ms  sent=1 got=00 elapsed=4.1ms

@@ -1,0 +1,2 @@
+2026-10-09 22:27:34,628 LOG_FILE /Users/alex/IdeaProjects/ELM327wifi/captures/elm-20261009-222734-627915.log
+2026-10-09 22:27:34,633 [Errno 2] could not open port /dev/cu.usbserial-10: [Errno 2] No such file or directory: '/dev/cu.usbserial-10'

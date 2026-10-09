@@ -1,0 +1,17 @@
+PORT=/dev/cu.usbserial-110  control-line timing (host call cost, not pin voltage)
+
+--- RTS ---
+ req_ms  set_call_ms  held_ms  clear_call_ms
+      1        0.029    1.032          0.204
+      5        0.178    5.180          0.231
+     10        0.214   10.216          0.289
+     25        0.198   25.199          0.256
+     50        0.168   50.169          0.324
+
+--- DTR ---
+ req_ms  set_call_ms  held_ms  clear_call_ms
+      1        0.041    1.041          0.247
+      5        0.193    5.193          0.213
+     10        0.197   10.198          0.265
+     25        0.169   25.171          0.372
+     50        0.202   50.204          0.371

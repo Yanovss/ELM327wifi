@@ -1,0 +1,27 @@
+2026-10-09 23:48:35,625 LOG_FILE /Users/alex/IdeaProjects/ELM327wifi/captures/elm-20261009-234835-625457.log
+2026-10-09 23:48:35,638 INIT begin target=B1 tester=F1 attempts=30
+2026-10-09 23:48:35,638 INIT attempt 1/30
+2026-10-09 23:48:35,947 INIT wakeup burst x1 sent, gap=7.4 ms (not wire measurement)
+2026-10-09 23:48:36,958 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:48:36,958 INIT attempt 2/30
+2026-10-09 23:48:37,268 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:48:38,277 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:48:38,278 INIT attempt 3/30
+2026-10-09 23:48:38,588 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:48:39,599 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:48:39,599 INIT attempt 4/30
+2026-10-09 23:48:39,911 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:48:40,912 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:48:40,913 INIT attempt 5/30
+2026-10-09 23:48:41,223 INIT wakeup burst x1 sent, gap=8.0 ms (not wire measurement)
+2026-10-09 23:48:42,231 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:48:42,232 INIT attempt 6/30
+2026-10-09 23:48:42,542 INIT wakeup burst x1 sent, gap=7.5 ms (not wire measurement)
+2026-10-09 23:48:43,547 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:48:43,548 INIT attempt 7/30
+2026-10-09 23:48:43,859 INIT wakeup burst x1 sent, gap=8.1 ms (not wire measurement)
+2026-10-09 23:48:44,862 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:48:44,862 INIT attempt 8/30
+2026-10-09 23:48:45,173 INIT wakeup burst x1 sent, gap=7.7 ms (not wire measurement)
+2026-10-09 23:48:46,179 INIT attempt: no valid C1 with two key bytes
+2026-10-09 23:48:46,179 INIT attempt 9/30

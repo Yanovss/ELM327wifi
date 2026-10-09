@@ -1,0 +1,184 @@
+2026-10-09 22:31:31,118 LOG_FILE /Users/alex/IdeaProjects/ELM327wifi/captures/elm-20261009-223131-118394.log
+2026-10-09 22:31:31,133 INIT begin target=B1 tester=F1 attempts=30
+2026-10-09 22:31:31,133 INIT attempt 1/30
+2026-10-09 22:31:31,492 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:31,493 TX 81 B1 F1 81 A4
+2026-10-09 22:31:31,504 RX_ECHO ignored
+2026-10-09 22:31:32,501 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:32,501 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:32,501 INIT attempt 2/30
+2026-10-09 22:31:32,861 INIT wakeup 0x00 sent, gap=57.1 ms (not wire measurement)
+2026-10-09 22:31:32,861 TX 81 B1 F1 81 A4
+2026-10-09 22:31:32,872 RX_ECHO ignored
+2026-10-09 22:31:33,862 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:33,863 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:33,863 INIT attempt 3/30
+2026-10-09 22:31:34,223 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:34,224 TX 81 B1 F1 81 A4
+2026-10-09 22:31:34,235 RX_ECHO ignored
+2026-10-09 22:31:35,230 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:35,231 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:35,231 INIT attempt 4/30
+2026-10-09 22:31:35,591 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:35,592 TX 81 B1 F1 81 A4
+2026-10-09 22:31:35,602 RX_ECHO ignored
+2026-10-09 22:31:36,592 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:36,593 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:36,593 INIT attempt 5/30
+2026-10-09 22:31:36,953 INIT wakeup 0x00 sent, gap=57.3 ms (not wire measurement)
+2026-10-09 22:31:36,953 TX 81 B1 F1 81 A4
+2026-10-09 22:31:36,964 RX_ECHO ignored
+2026-10-09 22:31:37,957 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:37,957 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:37,957 INIT attempt 6/30
+2026-10-09 22:31:38,318 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:38,318 TX 81 B1 F1 81 A4
+2026-10-09 22:31:38,329 RX_ECHO ignored
+2026-10-09 22:31:39,325 RX_TIMEOUT service=81 partial=FC
+2026-10-09 22:31:39,326 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:39,326 INIT attempt 7/30
+2026-10-09 22:31:39,687 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:39,687 TX 81 B1 F1 81 A4
+2026-10-09 22:31:39,698 RX_ECHO ignored
+2026-10-09 22:31:40,700 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:40,701 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:40,701 INIT attempt 8/30
+2026-10-09 22:31:41,062 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:41,063 TX 81 B1 F1 81 A4
+2026-10-09 22:31:41,073 RX_ECHO ignored
+2026-10-09 22:31:42,072 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:42,072 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:42,072 INIT attempt 9/30
+2026-10-09 22:31:42,433 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:42,434 TX 81 B1 F1 81 A4
+2026-10-09 22:31:42,444 RX_ECHO ignored
+2026-10-09 22:31:43,443 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:43,443 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:43,444 INIT attempt 10/30
+2026-10-09 22:31:43,804 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:43,805 TX 81 B1 F1 81 A4
+2026-10-09 22:31:43,816 RX_ECHO ignored
+2026-10-09 22:31:44,810 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:44,810 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:44,811 INIT attempt 11/30
+2026-10-09 22:31:45,171 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:45,173 TX 81 B1 F1 81 A4
+2026-10-09 22:31:45,184 RX_ECHO ignored
+2026-10-09 22:31:46,181 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:46,182 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:46,182 INIT attempt 12/30
+2026-10-09 22:31:46,542 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:46,542 TX 81 B1 F1 81 A4
+2026-10-09 22:31:46,553 RX_ECHO ignored
+2026-10-09 22:31:47,550 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:47,550 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:47,550 INIT attempt 13/30
+2026-10-09 22:31:47,910 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:47,911 TX 81 B1 F1 81 A4
+2026-10-09 22:31:47,922 RX_ECHO ignored
+2026-10-09 22:31:48,919 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:48,919 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:48,919 INIT attempt 14/30
+2026-10-09 22:31:49,279 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:49,280 TX 81 B1 F1 81 A4
+2026-10-09 22:31:49,291 RX_ECHO ignored
+2026-10-09 22:31:50,281 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:50,282 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:50,282 INIT attempt 15/30
+2026-10-09 22:31:50,642 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:50,643 TX 81 B1 F1 81 A4
+2026-10-09 22:31:50,654 RX_ECHO ignored
+2026-10-09 22:31:51,651 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:51,651 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:51,651 INIT attempt 16/30
+2026-10-09 22:31:52,011 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:52,012 TX 81 B1 F1 81 A4
+2026-10-09 22:31:52,023 RX_ECHO ignored
+2026-10-09 22:31:53,019 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:53,019 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:53,020 INIT attempt 17/30
+2026-10-09 22:31:53,380 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:53,381 TX 81 B1 F1 81 A4
+2026-10-09 22:31:53,392 RX_ECHO ignored
+2026-10-09 22:31:54,385 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:54,386 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:54,386 INIT attempt 18/30
+2026-10-09 22:31:54,746 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:54,747 TX 81 B1 F1 81 A4
+2026-10-09 22:31:54,758 RX_ECHO ignored
+2026-10-09 22:31:55,760 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:55,760 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:55,760 INIT attempt 19/30
+2026-10-09 22:31:56,120 INIT wakeup 0x00 sent, gap=57.3 ms (not wire measurement)
+2026-10-09 22:31:56,121 TX 81 B1 F1 81 A4
+2026-10-09 22:31:56,131 RX_ECHO ignored
+2026-10-09 22:31:57,133 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:57,134 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:57,134 INIT attempt 20/30
+2026-10-09 22:31:57,494 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:31:57,494 TX 81 B1 F1 81 A4
+2026-10-09 22:31:57,505 RX_ECHO ignored
+2026-10-09 22:31:58,500 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:58,500 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:58,500 INIT attempt 21/30
+2026-10-09 22:31:58,859 INIT wakeup 0x00 sent, gap=57.3 ms (not wire measurement)
+2026-10-09 22:31:58,860 TX 81 B1 F1 81 A4
+2026-10-09 22:31:58,871 RX_ECHO ignored
+2026-10-09 22:31:59,867 RX_TIMEOUT service=81 partial=
+2026-10-09 22:31:59,868 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:31:59,868 INIT attempt 22/30
+2026-10-09 22:32:00,229 INIT wakeup 0x00 sent, gap=57.3 ms (not wire measurement)
+2026-10-09 22:32:00,230 TX 81 B1 F1 81 A4
+2026-10-09 22:32:00,240 RX_ECHO ignored
+2026-10-09 22:32:01,241 RX_TIMEOUT service=81 partial=
+2026-10-09 22:32:01,241 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:32:01,242 INIT attempt 23/30
+2026-10-09 22:32:01,602 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:32:01,603 TX 81 B1 F1 81 A4
+2026-10-09 22:32:01,613 RX_ECHO ignored
+2026-10-09 22:32:02,604 RX_TIMEOUT service=81 partial=
+2026-10-09 22:32:02,605 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:32:02,605 INIT attempt 24/30
+2026-10-09 22:32:02,965 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:32:02,966 TX 81 B1 F1 81 A4
+2026-10-09 22:32:02,976 RX_ECHO ignored
+2026-10-09 22:32:03,967 RX_TIMEOUT service=81 partial=
+2026-10-09 22:32:03,968 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:32:03,968 INIT attempt 25/30
+2026-10-09 22:32:04,328 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:32:04,329 TX 81 B1 F1 81 A4
+2026-10-09 22:32:04,340 RX_ECHO ignored
+2026-10-09 22:32:05,334 RX_TIMEOUT service=81 partial=
+2026-10-09 22:32:05,334 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:32:05,334 INIT attempt 26/30
+2026-10-09 22:32:05,694 INIT wakeup 0x00 sent, gap=57.3 ms (not wire measurement)
+2026-10-09 22:32:05,695 TX 81 B1 F1 81 A4
+2026-10-09 22:32:05,705 RX_ECHO ignored
+2026-10-09 22:32:06,695 RX_TIMEOUT service=81 partial=
+2026-10-09 22:32:06,695 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:32:06,696 INIT attempt 27/30
+2026-10-09 22:32:07,055 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:32:07,056 TX 81 B1 F1 81 A4
+2026-10-09 22:32:07,066 RX_ECHO ignored
+2026-10-09 22:32:08,058 RX_TIMEOUT service=81 partial=
+2026-10-09 22:32:08,058 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:32:08,058 INIT attempt 28/30
+2026-10-09 22:32:08,419 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:32:08,419 TX 81 B1 F1 81 A4
+2026-10-09 22:32:08,430 RX_ECHO ignored
+2026-10-09 22:32:09,420 RX_TIMEOUT service=81 partial=
+2026-10-09 22:32:09,420 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:32:09,420 INIT attempt 29/30
+2026-10-09 22:32:09,780 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:32:09,781 TX 81 B1 F1 81 A4
+2026-10-09 22:32:09,792 RX_ECHO ignored
+2026-10-09 22:32:10,793 RX_TIMEOUT service=81 partial=
+2026-10-09 22:32:10,794 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:32:10,794 INIT attempt 30/30
+2026-10-09 22:32:11,155 INIT wakeup 0x00 sent, gap=57.4 ms (not wire measurement)
+2026-10-09 22:32:11,155 TX 81 B1 F1 81 A4
+2026-10-09 22:32:11,166 RX_ECHO ignored
+2026-10-09 22:32:12,166 RX_TIMEOUT service=81 partial=
+2026-10-09 22:32:12,166 INIT attempt: no valid C1 with two key bytes
+2026-10-09 22:32:12,166 INIT failed: no valid C1 after 30 attempts
+2026-10-09 22:32:12,167 PROBE failed: no positive parameter response

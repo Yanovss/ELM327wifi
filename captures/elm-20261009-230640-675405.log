@@ -1,0 +1,2 @@
+2026-10-09 23:06:40,675 LOG_FILE /Users/alex/IdeaProjects/ELM327wifi/captures/elm-20261009-230640-675405.log
+2026-10-09 23:06:40,678 [Errno 35] Could not exclusively lock port /dev/cu.usbserial-110: [Errno 35] Resource temporarily unavailable

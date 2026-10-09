@@ -1,0 +1,7 @@
+PORT=/dev/cu.usbserial-110  pattern=376 bytes
+   baud  received  missing  mismatch@aligned  verdict
+   9600       376        0                 0  CLEAN
+  10000       376        0                 0  CLEAN
+  10400       376        0                 0  CLEAN
+  19200       376        0                 0  CLEAN
+  38400       376        0                 0  CLEAN
