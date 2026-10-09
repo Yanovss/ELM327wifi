@@ -1,0 +1,28 @@
+2026-10-09 18:00:30,598 LOG_FILE /private/tmp/kline-live-init-probe.log
+2026-10-09 18:00:30,615 INIT begin target=B1 tester=F1
+2026-10-09 18:00:30,984 INIT host low=30.091 ms high=30.061 ms (not wire measurements)
+2026-10-09 18:00:30,984 TX 81 B1 F1 81 A4
+2026-10-09 18:00:30,993 RX_BYTE 81
+2026-10-09 18:00:30,993 RX_BYTE B1
+2026-10-09 18:00:30,993 RX_BYTE F1
+2026-10-09 18:00:30,993 RX_BYTE 81
+2026-10-09 18:00:30,993 RX_BYTE A4
+2026-10-09 18:00:30,994 RX 81 B1 F1 81 A4
+2026-10-09 18:00:30,994 RX_ECHO ignored
+2026-10-09 18:00:31,994 RX_TIMEOUT service=81 partial=
+2026-10-09 18:00:31,994 INIT failed: no valid C1 with two key bytes
+2026-10-09 18:00:31,994 PROBE failed: no positive parameter response
+2026-10-09 18:00:46,680 LOG_FILE /private/tmp/kline-live-init-probe.log
+2026-10-09 18:00:46,687 INIT begin target=B1 tester=F1
+2026-10-09 18:00:47,042 INIT host low=26.088 ms high=25.005 ms (not wire measurements)
+2026-10-09 18:00:47,042 TX 81 B1 F1 81 A4
+2026-10-09 18:00:47,051 RX_BYTE 81
+2026-10-09 18:00:47,051 RX_BYTE B1
+2026-10-09 18:00:47,051 RX_BYTE F1
+2026-10-09 18:00:47,051 RX_BYTE 81
+2026-10-09 18:00:47,051 RX_BYTE A4
+2026-10-09 18:00:47,051 RX 81 B1 F1 81 A4
+2026-10-09 18:00:47,051 RX_ECHO ignored
+2026-10-09 18:00:48,045 RX_TIMEOUT service=81 partial=
+2026-10-09 18:00:48,045 INIT failed: no valid C1 with two key bytes
+2026-10-09 18:00:48,045 PROBE failed: no positive parameter response
