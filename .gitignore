@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Captures and logs (kept locally, not published)
+captures/
+
+# IDE / OS
+.idea/
+.DS_Store
