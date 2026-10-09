@@ -25,7 +25,11 @@ class ElmTests(unittest.TestCase):
         self.assertEqual(session.execute('21 01'), '8BF1B1610190D2BF9394B0FB040086')
         self.assertEqual(session.execute('010C'), 'NO DATA')
         self.assertEqual(session.execute('ATFI'), '?')
-        self.assertEqual(session.execute('ATRV'), '?')
+        self.assertEqual(session.execute('ATRV'), '12.3V')
+        # Harmless setup commands are accepted so apps finish initialization.
+        self.assertEqual(session.execute('ATAT1'), 'OK')
+        self.assertEqual(session.execute('ATCRA'), 'OK')
+        self.assertEqual(session.execute('ATCAF0'), 'OK')
 
     def test_live_echo_and_checksum_validation(self):
         from elm327_wifi import LiveTransport

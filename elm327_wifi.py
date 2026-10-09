@@ -73,9 +73,17 @@ def precise_sleep(seconds):
 
 
 class LiveTransport:
-    def __init__(self, port, already_active=False, sleep=precise_sleep, clock=time.monotonic):
+    # A sleeping/just-powered ECU often ignores the first wakeups; retry like a
+    # real tester does instead of giving up after a single BREAK sequence.
+    # Captured Kalina climate ECU answered C1 only after ~27 consecutive inits,
+    # so the default is intentionally high.
+    INIT_ATTEMPTS = 30
+
+    def __init__(self, port, already_active=False, sleep=precise_sleep, clock=time.monotonic,
+                 init_attempts=INIT_ATTEMPTS):
         self.port = port
         self.sleep, self.clock = sleep, clock
+        self.init_attempts = init_attempts
         self.active = already_active
         self.last_response = clock() if already_active else None
         self.address = bytes.fromhex('B1 F1') if already_active else None
@@ -86,24 +94,57 @@ class LiveTransport:
 
     def initialize(self, header):
         self.invalidate()
-        LOG.info('INIT begin target=%02X tester=%02X', header[1], header[2])
-        # Host/USB scheduling makes pulse widths approximate, not guaranteed.
+        LOG.info('INIT begin target=%02X tester=%02X attempts=%d',
+                 header[1], header[2], self.init_attempts)
+        for attempt in range(1, self.init_attempts + 1):
+            LOG.info('INIT attempt %d/%d', attempt, self.init_attempts)
+            if self._init_once(header):
+                return True
+        LOG.warning('INIT failed: no valid C1 after %d attempts', self.init_attempts)
+        return False
+
+    # CH340/CH341 cannot drive a UART BREAK (measured: break_condition produces
+    # no low level at all). But it CAN form the ~25 ms low level a K-Line fast
+    # init wakeup needs by sending 0x00 at a low baud rate: at 360 baud 8N1 a
+    # 0x00 byte = 1 start + 8 zero data bits = 9 low bit-times = 25.0 ms low.
+    # Loopback confirmed the chip really drives the line low that long. After
+    # the low pulse, raise the high interval, restore 10400, send the init frame.
+    WAKEUP_BAUD = 360
+    DIAG_BAUD = 10400
+
+    def _set_baud(self, baud):
+        if getattr(self.port, 'baudrate', baud) != baud:
+            self.port.baudrate = baud
+
+    C1_TIMEOUT = 0.3      # a live ECU answered within ~100 ms in the hardware test
+    WAKEUP_TOTAL = 0.055  # ~25 ms low + ~25 ms high, measured from the write start
+
+    def _init_once(self, header):
         self.port.break_condition = False
         self.sleep(.300)
         self.port.reset_input_buffer()
+        start = self.clock()
         try:
-            self.port.break_condition = True
-            low = self.clock()
-            self.sleep(.025)
+            # Low pulse: 0x00 at WAKEUP_BAUD ~= 25 ms of K-Line low (fast-init WUP).
+            self._set_baud(self.WAKEUP_BAUD)
+            if self.port.write(b'\x00') != 1:
+                raise OSError('Incomplete serial write')
+            self.port.flush() if hasattr(self.port, 'flush') else None
+            # USB drivers may return from flush() early; pad to the full WUP time.
+            self.sleep(max(0, self.WAKEUP_TOTAL - (self.clock() - start)))
         finally:
-            self.port.break_condition = False
-        high = self.clock()
-        self.sleep(.025)
-        LOG.info('INIT host low=%.3f ms high=%.3f ms (not wire measurements)',
-                 (high - low) * 1000, (self.clock() - high) * 1000)
-        response = self._exchange(header, b'\x81', 1.0)
-        if response is None or len(response) != 7 or response[3] != 0xC1:
-            LOG.warning('INIT failed: no valid C1 with two key bytes')
+            # Never leave the port at the wakeup baud, even on I/O errors.
+            self._set_baud(self.DIAG_BAUD)
+        self.port.reset_input_buffer()
+        LOG.info('INIT low-baud wakeup 0x00 @%d sent, gap=%.1f ms (not wire measurement)',
+                 self.WAKEUP_BAUD, (self.clock() - start) * 1000)
+        request = kwp_frame(header, b'\x81')
+        if self.port.write(request) != len(request):
+            raise OSError('Incomplete serial write')
+        self.port.flush() if hasattr(self.port, 'flush') else None
+        response = self._read_c1(header, self.C1_TIMEOUT)
+        if response is None:
+            LOG.warning('INIT attempt: no valid C1 with two key bytes')
             return False
         self.active = True
         self.address = header[1:]
@@ -111,11 +152,25 @@ class LiveTransport:
         LOG.info('INIT success key_bytes=%s', response[4:6].hex(' ').upper())
         return True
 
+    def _read_c1(self, header, timeout):
+        # Accept the ECU keep-alive/init reply C1 regardless of the 0x80/0x81
+        # length-field header bit; the phone capture shows both 80.. and 81..
+        # wakeup frames and a 83 F1 B1 C1 .. response.
+        deadline = time.monotonic() + timeout
+        buffer = bytearray()
+        while time.monotonic() < deadline:
+            buffer.extend(self.port.read(64))
+            for frame in extract_frames(buffer):
+                if frame[1:3] != bytes([header[2], header[1]]):
+                    continue
+                if len(frame) == 7 and frame[3] == 0xC1:
+                    return frame
+        return None
+
     def exchange(self, header, payload, timeout):
-        # Only known read services are forwarded by this experimental bridge.
-        if payload not in (bytes.fromhex('21 01'), bytes.fromhex('18 00 80 00'),
-                           bytes.fromhex('1A 80')):
-            return None
+        # Transparent bridge: forward any KWP request from the client to the
+        # ECU. Initialization is performed automatically when the session is not
+        # active, the target address changed, or the link went quiet.
         if (not self.active or self.address != header[1:] or
                 self.last_response is None or self.clock() - self.last_response > 3.0):
             if not self.initialize(header):
@@ -142,24 +197,26 @@ class LiveTransport:
         deadline = time.monotonic() + timeout
         buffer = bytearray()
         while time.monotonic() < deadline:
-            received = self.port.read(1)
-            if received:
-                LOG.info("RX_BYTE %s", received.hex(" ").upper())
+            received = self.port.read(64)
             buffer.extend(received)
             for frame in extract_frames(buffer):
-                LOG.info('RX %s', frame.hex(' ').upper())
                 if frame == request:  # single-wire adapter echo
                     LOG.info("RX_ECHO ignored")
                     continue
                 if frame[1:3] != bytes([header[2], header[1]]):
                     continue
+                LOG.info('RX %s', frame.hex(' ').upper())
                 data = frame[3:-1]
                 if data[:2] == bytes([0x7F, payload[0]]):
                     if len(data) >= 3 and data[2] == 0x78:
-                        continue  # bounded by the original timeout
-                    return frame
+                        continue  # responsePending: keep waiting, bounded by timeout
+                    return frame  # other negative responses are returned as-is
                 if data[0] == (payload[0] + 0x40) & 255:
-                    if payload[0] in (0x21, 0x1A) and data[1:2] != payload[1:2]:
+                    # For services echoing a sub-function/identifier (e.g. 21,
+                    # 1A, 22), require the identifier byte to match so a stale
+                    # frame for another PID is not mistaken for this answer.
+                    if payload[0] in (0x21, 0x1A, 0x22, 0x2E, 0x30, 0x31) and \
+                            len(payload) >= 2 and data[1:2] != payload[1:2]:
                         continue
                     return frame
         LOG.warning('RX_TIMEOUT service=%02X partial=%s', payload[0], buffer.hex(' ').upper())
@@ -202,9 +259,17 @@ class ElmSession:
             if command in (prefix + '0', prefix + '1'):
                 setattr(self, attr, command[-1] == '1')
                 return 'OK'
-        if command == 'ATSP5':
+        if command == 'ATSP5' or command == 'ATSPA5' or command == 'ATTP5':
             self.protocol = 5
             return 'OK'
+        if command in ('ATSP0', 'ATSP00'):
+            # Auto protocol search: this bridge only speaks ISO 14230 fast (5).
+            self.protocol = 5
+            return 'OK'
+        if command == 'ATRV':
+            # Battery voltage: no real ADC on this bridge; report a plausible
+            # fixed value so apps that gate on voltage keep going.
+            return '12.3V'
         if command == 'ATFI':
             if self.protocol != 5 or not hasattr(self.transport, 'initialize'):
                 return '?'
@@ -226,6 +291,22 @@ class ElmSession:
         if re.fullmatch(r'ATST[0-9A-F]{2}', command):
             ticks = int(command[4:], 16)
             self.timeout = (ticks or 0x32) * .004
+            return 'OK'
+        # Harmless configuration commands many apps send during setup. We accept
+        # them with OK so initialization proceeds; they have no effect on the
+        # KWP fast-init K-Line path this bridge actually drives.
+        if re.fullmatch(r'AT(AT[0-2]|AL|AR|CAF[01]|CEA|CF[0-9A-F]+|CM[0-9A-F]+|'
+                        r'CRA[0-9A-F]*|CP[0-9A-F]{2}|SI|SR[0-9A-F]{2}|'
+                        r'TA[0-9A-F]{2}|R[0-9A-F]{2}|RA[0-9A-F]{2}|'
+                        r'SW[0-9A-F]{2}|IB[0-9A-F]{2}|BI|FE|PP.*|M[01]|'
+                        r'NL|LP|IIA[0-9A-F]{2}|KW[01]?|WM.*|'
+                        r'JE|JS|JHF[01]|JTM[0-9])', command):
+            return 'OK'
+        if re.fullmatch(r'ATSH[0-9A-F]{4}', command):
+            # Two-byte header (target+tester) addressing used by some apps; keep
+            # the current format byte, set target and tester from the command.
+            tgt_tst = bytes.fromhex(command[4:])
+            self.header = bytes([self.header[0]]) + tgt_tst
             return 'OK'
         if command.startswith('AT'):
             return '?'
@@ -301,6 +382,8 @@ def main():
     parser.add_argument('--port', default='/dev/cu.usbserial-1110')
     parser.add_argument('--baudrate', type=positive_int, default=10400)
     parser.add_argument('--session-already-active', action='store_true')
+    parser.add_argument('--init-attempts', type=positive_int, default=LiveTransport.INIT_ATTEMPTS,
+                        help='fast-init retries before giving up (a sleeping ECU may ignore the first wakeups)')
     parser.add_argument('--log', type=Path, help='log path; default captures/elm-TIMESTAMP.log')
     parser.add_argument('--probe', action='store_true', help='initialize and read once, without TCP server')
     args = parser.parse_args()
@@ -324,7 +407,8 @@ def main():
             port.dtr = port.rts = False
             port.port = args.port
             port.open()
-            transport = LiveTransport(port, already_active=args.session_already_active)
+            transport = LiveTransport(port, already_active=args.session_already_active,
+                                      init_attempts=args.init_attempts)
             if args.probe:
                 response = transport.exchange(bytes.fromhex('80 B1 F1'), bytes.fromhex('21 01'), 1.0)
                 if response is None or response[3:5] != bytes.fromhex('61 01'):

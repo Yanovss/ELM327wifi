@@ -5,7 +5,7 @@ Mac с USB–K-Line адаптером выступает сервером дл�
 ## Проверка интерфейса без оборудования
 
 ```sh
-cd /Users/alex/PyCharmMiscProject
+cd /Users/alex/IdeaProjects/ELM327wifi
 source .venv/bin/activate
 python3 elm327_wifi.py
 ```
